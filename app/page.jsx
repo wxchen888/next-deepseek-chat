@@ -4,6 +4,7 @@ import Image from "next/image";
 import { assets } from "@/assets/assets";
 import Sidebar from "@/components/Sidebar";
 import PromptBox from "@/components/PromptBox";
+import Message from "@/components/Message";
 
 export default function Home() {
   const [expand, setExpand] = useState(false);
@@ -47,7 +48,10 @@ export default function Home() {
               </p>
             </>
           ) : (
-            <div>历史记录</div>
+            <div>
+              <Message role="user" content="你好"></Message>
+              <Message role="ai" content="你好，我是 Deepseek Chat"></Message>
+            </div>
           )}
 
           {/* prompt box */}
