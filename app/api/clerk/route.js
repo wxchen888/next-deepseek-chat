@@ -17,6 +17,7 @@ export async function POST(req) {
   //   从请求中提取 svix-id （事件ID）和 svix-signature （签名），用于验证请求合法性
   const svixHeaders = {
     "svix-id": headerPayload.get("svix-id"),
+    "svix-timestamp": headerPayload.get("svix-timestamp"),
     "svix-signature": headerPayload.get("svix-signature"),
   };
 
